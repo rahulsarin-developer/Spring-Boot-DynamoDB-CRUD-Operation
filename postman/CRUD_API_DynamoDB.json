@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "3131a055-41fe-40b7-9ec2-b2366a4a847f",
+		"name": "CRUD API DynamoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"documentName\": \"doc101\",\n\t\"documentType\": \"xls\",\n\t\"documentOwner\": \"docowner01\",\n\t\"documentCategory\": \"cat110\",\n\t\"createdDateTime\": \"2020-05-24T21:40:41.021+0000\",\n\t\"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/aws/document",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Record",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"documentId\": \"1c6a7c92-f9be-4c5a-8384-00c0f1d93c02\",\n\t\"documentName\": \"doc202\",\n\t\"documentType\": \"pdf\",\n\t\"documentOwner\": \"docowner01\",\n\t\"documentCategory\": \"cat110\",\n\t\"createdDateTime\": \"2020-05-24T21:45:30.021+0000\",\n\t\"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/aws/document",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Record based on documentId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/aws/document/1c6a7c92-f9be-4c5a-8384-00c0f1d93c02",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"document",
+						"1c6a7c92-f9be-4c5a-8384-00c0f1d93c02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Record based on documentId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"documentName\": \"doc102\",\n\t\"documentType\": \"pdf\",\n\t\"documentOwner\": \"docowner01\",\n\t\"documentCategory\": \"cat110\",\n\t\"createdDateTime\": \"2020-04-24T15:28:41.021+0000\",\n\t\"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/aws/document/1c6a7c92-f9be-4c5a-8384-00c0f1d93c02",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"document",
+						"1c6a7c92-f9be-4c5a-8384-00c0f1d93c02"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
