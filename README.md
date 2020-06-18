@@ -1,5 +1,5 @@
 # Spring-Boot-DynamoDB-CRUD-Operation
-SpringBoot and DynamoDB CRUD Operation
+Spring Boot and DynamoDB CRUD Operation
 
 Create User in AWS through IAM:
 
